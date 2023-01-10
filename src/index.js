@@ -52,7 +52,7 @@ app.post("/login", async (req,res)=>{
         // res.send(getemail.name)
     
         if(getemail.password===password){
-          res.render("Home");
+          res.render("Login");
         }else{
             res.send('password not match...')         }
     }catch(err){
