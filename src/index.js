@@ -14,7 +14,7 @@ app.set("views",templatePath)
 
 
 app.get("/",(req,res)=>{
-    res.render("Login")
+    res.render("Home")
 })
 
 
