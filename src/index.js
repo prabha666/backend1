@@ -22,10 +22,10 @@ app.get("/signup",(req,res)=>{
     
     res.render("Signup")
 })
-app.get("/home"req,res)=>{
+// app.get("/home"req,res)=>{
     
-    res.render("Home")
-})
+//     res.render("Home")
+// })
 app.post("/login", async (req,res)=>{
     // const {
     //     name,
