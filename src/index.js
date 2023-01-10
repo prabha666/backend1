@@ -40,24 +40,23 @@ app.post("/login", async (req,res)=>{
     //     }
  
  
-             res.render("Home");
+           
 
-//     try{
-//         const email=req.body.email;
-//         const password=req.body.password;
+     try{
+          const email=req.body.email;
+        const password=req.body.password;
     
-//         const getemail= await collection.findOne({email:email})
-//         // console.log(getemail.name);
-//         // res.send(getemail.name)
+       const getemail= await collection.findOne({email:email})
+        // console.log(getemail.name);
+        // res.send(getemail.name)
     
-//         if(getemail.password===password){
-//             res.render("Home");
-//         }else{
-//             res.send('password not match...')
-//         }
-//     }catch(err){
-//         res.send(err)
-//     }
+        if(getemail.password===password){
+          res.render("Home");
+        }else{
+            res.send('password not match...')         }
+    }catch(err){
+        res.send(err)
+    }
 
 
     })
