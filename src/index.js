@@ -17,15 +17,16 @@ app.get("/",(req,res)=>{
     res.render("Home")
 })
 
+app.get("/login",(req,res)=>{
+    
+    res.render("Login")
+})
 
 app.get("/signup",(req,res)=>{
     
     res.render("Signup")
 })
-// app.get("/home"req,res)=>{
-    
-//     res.render("Home")
-// })
+
 app.post("/login", async (req,res)=>{
     // const {
     //     name,
