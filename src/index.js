@@ -30,7 +30,7 @@ app.post("/login", async (req,res)=>{
     
     // collection.findOne({name:name},(err,result)=>{
     //     if(name===result.name){
-    //         res.render("Home")
+    //         res.render("login successfully")
     //     }else{
     //        res.send("faild")
     //     }
