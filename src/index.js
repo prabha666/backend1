@@ -7,35 +7,41 @@ const collection=require('./mongoose')
 const templatePath=path.join(__dirname,'../templates')
 
 
+
 app.use(express.json())
 app.set("view engine","hbs")
 app.set("views",templatePath)
  app.use(express.urlencoded({extended:false}))
 
 
+
 app.get("/",(req,res)=>{
+    
     res.render("Home")
 })
+
 
 
 app.get("/signup",(req,res)=>{
     
     res.render("Signup")
 })
-
 app.post("/login", async (req,res)=>{
-     try{
-          const email=req.body.email;
+   
+   
+    try{
+        const email=req.body.email;
         const password=req.body.password;
     
-       const getemail= await collection.findOne({email:email})
+        const getemail= await collection.findOne({email:email})
         // console.log(getemail.name);
         // res.send(getemail.name)
     
         if(getemail.password===password){
-          res.send("Login Successfully");
+            res.send("login sucesssfully");
         }else{
-            res.send('password not match...')         }
+            res.send('password not match...')
+        }
     }catch(err){
         res.send(err)
     }
@@ -44,11 +50,6 @@ app.post("/login", async (req,res)=>{
     })
 
    
-
-    
-   
-
-
 app.post("/signup", (req,res)=>{
    
 //    console.log(req.body.name);
