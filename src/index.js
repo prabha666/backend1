@@ -17,10 +17,6 @@ app.get("/",(req,res)=>{
     res.render("Home")
 })
 
-app.get("/login",(req,res)=>{
-    
-    res.render("Login")
-})
 
 app.get("/signup",(req,res)=>{
     
@@ -28,21 +24,6 @@ app.get("/signup",(req,res)=>{
 })
 
 app.post("/login", async (req,res)=>{
-    // const {
-    //     name,
-    //     password
-    // }=req.body;
-    
-    // collection.findOne({name:name},(err,result)=>{
-    //     if(name===result.name){
-    //         res.render("login successfully")
-    //     }else{
-    //        res.send("faild")
-    //     }
- 
- 
-           
-
      try{
           const email=req.body.email;
         const password=req.body.password;
@@ -52,7 +33,7 @@ app.post("/login", async (req,res)=>{
         // res.send(getemail.name)
     
         if(getemail.password===password){
-          res.render("Login");
+          res.send("Login Successfully");
         }else{
             res.send('password not match...')         }
     }catch(err){
