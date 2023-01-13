@@ -22,10 +22,10 @@ app.get("/",(req,res)=>{
 
 
 
-app.get("/signup",(req,res)=>{
+// app.get("/signup",(req,res)=>{
     
-    res.render("Signup")
-})
+//     res.render("Signup")
+// })
 app.post("/login", async (req,res)=>{
    
    
